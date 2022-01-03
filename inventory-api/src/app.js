@@ -24,7 +24,7 @@ app.use(AWSXRay.express.openSegment('Inventory API'));
 const port = 5001;
 const resourceApiEndpont = process.env.RESOURCE_API_ENDPOINT || 'http://localhost:5000';
 const dynamodbTable = process.env.DYNAMODB_TABLE || 'development-inventory' ;
-const awsDefaultRegion = process.env.AWS_DEFAULT_REGION || 'us-west-2'
+const awsDefaultRegion = process.env.AWS_DEFAULT_REGION || 'ap-southeast-1'
 const dynamoDb = new AWS.DynamoDB.DocumentClient({region: awsDefaultRegion});
 app.use(AWSXRay.express.openSegment('Inventory API'));
 

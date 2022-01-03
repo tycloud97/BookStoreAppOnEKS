@@ -10,19 +10,19 @@ ingress:
       alb.ingress.kubernetes.io/load-balancer-attributes: "idle_timeout.timeout_seconds=360"
     path: /
     hosts:
-      - hostname: renting-api.dev.bookstore.techenvision.net
+      - hostname: renting-api.dev.bookstore.huuty.xyz
         serviceName: bookstore-renting-api-service
         port: 80
       
-      - hostname: resource-api.dev.bookstore.techenvision.net
+      - hostname: resource-api.dev.bookstore.huuty.xyz
         serviceName: bookstore-resource-api-service
         port: 80
       
-      - hostname: inventory-api.dev.bookstore.techenvision.net
+      - hostname: inventory-api.dev.bookstore.huuty.xyz
         serviceName: bookstore-inventory-api-service
         port: 80
 
-      - hostname: clients-api.dev.bookstore.techenvision.net
+      - hostname: clients-api.dev.bookstore.huuty.xyz
         serviceName: bookstore-clients-api-service
         port: 80
 
@@ -36,10 +36,10 @@ ingress:
       alb.ingress.kubernetes.io/load-balancer-attributes: "idle_timeout.timeout_seconds=360"
     path: /
     hosts:
-      - hostname: web.dev.bookstore.techenvision.net
+      - hostname: web.dev.bookstore.huuty.xyz
         serviceName: bookstore-front-end-service
         port: 80
 
-      - hostname: api.dev.bookstore.techenvision.net
+      - hostname: api.dev.bookstore.huuty.xyz
         serviceName: bookstore-front-end-proxy-service
         port: 80

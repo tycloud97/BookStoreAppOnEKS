@@ -35,5 +35,5 @@ output "cluster_name" {
 
 output "fluentbit_irsa_role" {
   description = "Fluent Bit IAM Role for IRSA."
-  value       = module.iam_assumable_role_fluentbit.this_iam_role_arn
+  value       = module.iam_assumable_role_fluentbit.iam_role_arn
 }

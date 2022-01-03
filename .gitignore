@@ -32,6 +32,6 @@ override.tf.json
 
 windows_environment.ps1
 
-kubeconfig_bookstore-eks-X7b6Bawd
-infrastructure/eks/terraform/kubeconfig_bookstore-eks-X7b6Bawd
+kubeconfig_bookstore-eks-jjnKsgUc
+infrastructure/eks/terraform/kubeconfig_bookstore-eks-jjnKsgUc
 infrastructure/cicd/auth-config.yaml

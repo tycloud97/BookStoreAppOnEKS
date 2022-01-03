@@ -8,7 +8,7 @@ metadata:
     k8s-addon: cluster-autoscaler.addons.k8s.io
     k8s-app: cluster-autoscaler
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::<ACCOUNT_ID>:role/<CLUSTER_NAME>-sa-ca-role
+    eks.amazonaws.com/role-arn: arn:aws:iam::827539266883:role/<CLUSTER_NAME>-sa-ca-role
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole

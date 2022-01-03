@@ -75,11 +75,11 @@ data:
     [OUTPUT]
         Name            es
         Match           *
-        Host            ${ES_ENDPOINT}
+        Host            
         Port            443
         TLS             On
         AWS_Auth        On
-        AWS_Region      ${AWS_REGION}
+        AWS_Region      
         Retry_Limit     6
 
   parsers.conf: |

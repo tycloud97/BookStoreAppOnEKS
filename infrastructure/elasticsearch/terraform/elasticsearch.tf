@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-southeast-1"
 }
 
 variable "domain" {
@@ -10,7 +10,7 @@ variable "vpc" {}
 
 variable "hosted_zone" {
     description = "Hosted Zone name for ACM and DNS."
-    //default = "techenvision.net"
+    //default = "huuty.xyz"
     type    = string
 }
 
@@ -182,6 +182,7 @@ resource "aws_route53_record" "custom_es_r53_records" {
 
 output "es_password" {
   description = "Password for Elastic Search User."
+  sensitive = true
   value       = aws_elasticsearch_domain.es.advanced_security_options[0].master_user_options[0].master_user_password
 }
 

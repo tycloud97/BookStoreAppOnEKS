@@ -1,7 +1,7 @@
 apiVersion: crd.k8s.amazonaws.com/v1alpha1
 kind: ENIConfig
 metadata: 
-  name: us-west-2c
+  name: ap-southeast-1c
 spec: 
   securityGroups: 
     - <SG1_HERE>

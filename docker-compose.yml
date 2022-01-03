@@ -6,7 +6,7 @@ services:
             - 5000:5000
         environment:
             DYNAMODB_TABLE: development-resources
-            AWS_DEFAULT_REGION: us-west-2
+            AWS_DEFAULT_REGION: ap-southeast-1
             AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
             AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
             AWS_XRAY_SDK_ENABLED: "false"
@@ -19,7 +19,7 @@ services:
         environment: 
             DYNAMODB_TABLE: development-inventory
             RESOURCE_API_ENDPOINT: http://resources-api:5000
-            AWS_DEFAULT_REGION: us-west-2
+            AWS_DEFAULT_REGION: ap-southeast-1
             AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
             AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
     clients-api:
@@ -27,7 +27,7 @@ services:
         ports: 
             - "5003:5003"
         environment: 
-            AWS_DEFAULT_REGION: us-west-2
+            AWS_DEFAULT_REGION: ap-southeast-1
             AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
             AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
     renting-api:
@@ -35,7 +35,7 @@ services:
         ports:
           - "5004:5004"
         environment:
-          AWS_DEFAULT_REGION: us-west-2
+          AWS_DEFAULT_REGION: ap-southeast-1
           AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
           AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
           DYNAMODB_TABLE: development-renting

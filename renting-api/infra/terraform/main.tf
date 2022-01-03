@@ -1,6 +1,6 @@
 provider "aws" {
   profile = "default"
-  region  = "us-west-2"
+  region  = "ap-southeast-1"
 }
 
 module "dynamodb_table" {

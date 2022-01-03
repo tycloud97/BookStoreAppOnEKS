@@ -1,2 +1,2 @@
-hosted_zone="techenvision.net"
+hosted_zone="huuty.xyz"
 vpc="bookstore-vpc"

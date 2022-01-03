@@ -31,7 +31,7 @@ terraform init -input=false
 terraform apply -input=false -auto-approve
 cluster_name=$(terraform output -raw cluster_name)
 export FLUENTBIT_ROLE=$(terraform output -raw fluentbit_irsa_role)
-aws eks update-kubeconfig --name $cluster_name --region us-west-2
+aws eks update-kubeconfig --name $cluster_name --region ap-southeast-1
 
 echo "***** Step-3 - Elastic Search in AWS  *********"
 cd $curdir/infrastructure/elasticsearch/terraform
@@ -41,7 +41,7 @@ export ES_KIBANA_ENDPOINT=$(terraform output -raw es_kibana_endpoint)
 export ES_ENDPOINT=$(terraform output -raw es_endpoint)
 export ES_DOMAIN_USER=$(terraform output -raw es_user)
 export ES_DOMAIN_PASSWORD=$(terraform output -raw es_password)
-export AWS_REGION="us-west-2"
+export AWS_REGION="ap-southeast-1"
 
 echo "***** Step-4 - OpenVPN in AWS  *********"
 cd $curdir/infrastructure/openVPN/terraform

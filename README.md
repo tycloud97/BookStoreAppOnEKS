@@ -49,8 +49,8 @@ docker compose up
 5. Build Resource API and update `resource-api\infra\helm\values.development.yaml` file with Repo , Tag and Service Account Role ending with `development-sa-resource-api-role`
 ```
 cd resource-api
-docker build -t <Docker HUb Account>/bookstoreapp_resource-api .
-docker push <Docker HUb Account>/bookstoreapp_resource-api
+docker build -t typrone1/bookstoreapp_resource-api .
+docker push typrone1/bookstoreapp_resource-api
 ```
 6. Run Resource API
 ```
@@ -59,8 +59,8 @@ docker push <Docker HUb Account>/bookstoreapp_resource-api
 7. Build Inventory API and update `inventory-api\infra\helm\values.development.yaml` file with Repo , Tag and Service Account Role ending with `development-sa-inventory-api-role`
 ```
 cd inventory-api
-docker build -t <Docker HUb Account>/bookstoreapp_inventory-api .
-docker push <Docker HUb Account>/bookstoreapp_inventory-api
+docker build -t typrone1/bookstoreapp_inventory-api .
+docker push typrone1/bookstoreapp_inventory-api
 ```
 8. Run Inventory API
 ```
@@ -69,8 +69,8 @@ docker push <Docker HUb Account>/bookstoreapp_inventory-api
 9. Build Clients API and update `clients-api\infra\helm\values.development.yaml` file with Repo , Tag and Service Account Role ending with `development-sa-clients-api-role`
 ```
 cd clients-api
-docker build -t <Docker HUb Account>/bookstoreapp_clients-api .
-docker push <Docker HUb Account>/bookstoreapp_clients-api
+docker build -t typrone1/bookstoreapp_clients-api .
+docker push typrone1/bookstoreapp_clients-api
 ```
 10. Run Clients API
 ```
@@ -79,8 +79,8 @@ docker push <Docker HUb Account>/bookstoreapp_clients-api
 11. Build Renting API and update `renting-api\infra\helm\values.development.yaml` file with Repo , Tag and Service Account Role ending with `development-sa-renting-api-role`
 ```
 cd renting-api
-docker build -t <Docker HUb Account>/bookstoreapp_renting-api .
-docker push <Docker HUb Account>/bookstoreapp_renting-api
+docker build -t typrone1/bookstoreapp_renting-api .
+docker push typrone1/bookstoreapp_renting-api
 ```
 12. Run Renting API
 ```
@@ -89,8 +89,8 @@ docker push <Docker HUb Account>/bookstoreapp_renting-api
 13. Build Front End and update `front-end\infra\helm\values.development.yaml` file with Repo , Tag and Service Account Role ending with `development-sa-renting-api-role` and Hosted Zone.
 ```
 cd front-end
-docker build -t <Docker HUb Account>/bookstoreapp_front-end .
-docker push <Docker HUb Account>/bookstoreapp_front-end
+docker build -t typrone1/bookstoreapp_front-end .
+docker push typrone1/bookstoreapp_front-end
 ```
 14. Run Front End
 ```
@@ -178,3 +178,6 @@ kubectl delete -f infrastructure\k8s-tooling\external-dns\external-dns.yaml
 
 
 
+infrastructure/k8s-tooling/app-mesh/appmesh-sa/templates/serviceaccount.yaml
+labels:
+    {{- include "appmesh-controller.labels" . | nindent 4 }}

@@ -1,0 +1,21 @@
+apiVersion: v1
+data:
+  mapAccounts: |
+    []
+  mapRoles: |
+    - "groups":
+      - "system:master"
+      "rolearn": "arn:aws:iam::827539266883:role/codebuild-resource-api"
+      "username": "build-bookstore-development-deploy-resource-api"
+  mapUsers: |
+    []
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-01-01T06:37:40Z"
+  labels:
+    app.kubernetes.io/managed-by: Terraform
+    terraform.io/module: terraform-aws-modules.eks.aws
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "652"
+  uid: fabf5184-c9a3-4dc4-b2ee-a2f0621a1ad7

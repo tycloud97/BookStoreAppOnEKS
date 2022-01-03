@@ -5,7 +5,7 @@ appRole: backendapi
 replicaCount: 1
 
 image:
-  repository: erankitcs/bookstoreapp_renting-api
+  repository: typrone1/bookstoreapp_renting-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -86,8 +86,8 @@ endpoints:
   clients: http://bookstore-clients-api-service
   resources: http://bookstore-resource-api-service
 aws:
-  region: us-west-2
+  region: ap-southeast-1
 test: 
   enabled: false
 mesh:
-  enabled: true
+  enabled: false

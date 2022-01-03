@@ -5,7 +5,7 @@ appRole: backendapi
 replicaCount: 1
 
 image:
-  repository: erankitcs/bookstoreapp_clients-api
+  repository: typrone1/bookstoreapp_clients-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -18,7 +18,7 @@ serviceAccount:
   # Specifies whether a service account should be created
   create: true
   # Annotations to add to the service account
-  roleARN: arn:aws:iam::<ACCOUNT_ID>:role/bookstore-eks-X7b6Bawd-development-sa-resource-api-role
+  roleARN: arn:aws:iam::827539266883:role/bookstore-eks-jjnKsgUc-development-sa-resource-api-role
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
@@ -82,9 +82,9 @@ tolerations: []
 affinity: {}
 
 aws:
-  region: us-west-2
+  region: ap-southeast-1
   xray_enabled: "false"
 test: 
   enabled: false
 mesh:
-  enabled: true
+  enabled: false

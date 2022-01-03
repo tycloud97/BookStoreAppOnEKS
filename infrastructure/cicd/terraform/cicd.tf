@@ -1,6 +1,6 @@
 provider "aws" {
   profile = "default"
-  region  = "us-west-2"
+  region  = "ap-southeast-1"
 }
 
 data "terraform_remote_state" "eks_cluster" {

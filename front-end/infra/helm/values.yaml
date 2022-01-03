@@ -5,7 +5,7 @@ appRole: frontend
 replicaCount: 1
 
 image:
-  repository: erankitcs/bookstoreapp_front-end
+  repository: typrone1/bookstoreapp_front-end
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
@@ -17,7 +17,7 @@ fullnameOverride: ""
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
-  roleARN: arn:aws:iam::<ACCOUNT_ID>:role/bookstore-eks-X7b6Bawd-development-sa-front-end-role
+  roleARN: arn:aws:iam::827539266883:role/bookstore-eks-jjnKsgUc-development-sa-front-end-role
   # Annotations to add to the service account
   annotations: {}
   # The name of the service account to use.
@@ -83,12 +83,12 @@ tolerations: []
 affinity: {}
 
 api:
-  url: https://api.dev.bookstore.techenvision.net
-  resource_api: https://resource-api.dev.bookstore.techenvision.net/
-  inventory_api: https://inventory-api.dev.bookstore.techenvision.net/
-  renting_api: https://renting-api.dev.bookstore.techenvision.net/
-  clients_api: https://clients-api.dev.bookstore.techenvision.net/
+  url: https://api.dev.bookstore.huuty.xyz
+  resource_api: https://resource-api.dev.bookstore.huuty.xyz/
+  inventory_api: https://inventory-api.dev.bookstore.huuty.xyz/
+  renting_api: https://renting-api.dev.bookstore.huuty.xyz/
+  clients_api: https://clients-api.dev.bookstore.huuty.xyz/
 test: 
   enabled: false
 mesh:
-  enabled: true
+  enabled: false
