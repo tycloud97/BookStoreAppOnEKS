@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 # AWS SDK
-gem 'aws-sdk', '~> 3'
+gem 'aws-sdk', '~> 3', '>= 3.1.0'
 
 # X-Ray
 gem 'aws-xray-sdk', require: ['aws-xray-sdk/facets/rails/railtie']
